@@ -35,7 +35,7 @@ public class CustomerListDataAccessService implements CustomerDao{
     }
 
     @Override
-    public Optional<Customer> selectCustomerById(Integer id) {
+    public Optional<Customer> selectCustomerById(Long id) {
         return customers.stream().filter(c -> c.getId().equals(id)).findFirst();
 
     }
@@ -51,7 +51,7 @@ public class CustomerListDataAccessService implements CustomerDao{
     }
 
     @Override
-    public boolean existsPersonWithId(Integer id) {
+    public boolean existsPersonWithId(Long id) {
        return customers.stream().anyMatch(c->c.getId().equals(id));
     }
     //若列表中 ID 唯一，两种方法效果一致。
@@ -59,7 +59,7 @@ public class CustomerListDataAccessService implements CustomerDao{
     //removeIf 方法直接在 customers 列表上操作，删除所有符合 c.getId().equals(id) 条件的对象。
     //效果：此方法会删除列表中所有 ID 与 id 相等的 Customer 对象，而不仅仅是第一个匹配的对象。
     @Override
-    public void deleteCustomerById(Integer id) {
+    public void deleteCustomerById(Long id) {
         customers.removeIf(c -> c.getId().equals(id));
     }
 

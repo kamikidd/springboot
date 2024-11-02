@@ -39,7 +39,7 @@ public class AmigoApplication {
             );
             List<Customer> customers = List.of(alex,
                     jamila);
-            customerRepository.saveAll(customers);
+//            customerRepository.saveAll(customers);
         };
     }
 }
