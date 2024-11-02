@@ -1,14 +1,8 @@
 package dev.amigocode.customer;
 
-import dev.amigocode.AmigoApplication;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.math.BigInteger;
-import java.util.ArrayList;
-import java.util.List;
 
 @Data
 
